@@ -211,24 +211,7 @@
 				document.getElementById('banner').style.minHeight = window.innerHeight+'px';
 			}
 
-			var test_height = document.getElementsByClassName('testimonial-height');
-
-			for(var i=0; i<test_height.length;i++)
-			{
-				test_height[i].style.height = 'auto';
-			}
-
-			var car_item = document.getElementsByClassName('carousel-item');
-			for(var i=0; i<car_item.length;i++)
-			{
-				car_item[i].classList.remove("active");
-			}
-			car_item[0].classList.add("active");
-
-			for(var i=0; i<test_height.length;i++)
-			{
-				test_height[i].style.height = document.getElementById('longest').clientHeight+'px';
-			}
+			
 
 			var service_data = document.getElementsByClassName('service-data');
 			for(var i=0;i<service_data.length;i++)
@@ -445,7 +428,7 @@
 
 		function formSuccess()
 		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname pt-md-3 pr-md-3 pt-1 pr-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center pt-md-3 pt-0">Thank You</h2><h2 class="text-center pt-md-1 pt-0">for contacting us!</h2><h2 class="text-center pt-md-3 pt-0">We will get back to you on your given contact details!</h2><h2 class="text-center pt-lg-4 pt-md-2 pt-1 mt-lg-2 mt-0 thank-pop-smile text-danger"><i class="far fa-grin-alt"></i></h2>';
+			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-grin-alt"></i></h2>';
 			contact_submit();
 			document.getElementById('name').removeAttribute('readonly');
 			document.getElementById('phone').removeAttribute('readonly');
@@ -457,7 +440,7 @@
 
 		function formError()
 		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname pt-md-3 pr-md-3 pt-1 pr-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center pt-md-3 pt-0">Sorry</h2><h2 class="text-center pt-md-1 pt-0">Request could not be submitted</h2><h3 class="text-center pt-md-3 pt-0"><a href="javascript: void(0)" onclick="return slidein();">Try again</a></h3><h2 class="text-center pt-lg-4 pt-md-2 pt-1 mt-lg-2 mt-0 thank-pop-smile text-danger"><i class="far fa-frown"></i></h2>';
+			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Sorry</h2><h2 class="text-center padding-t-md-1 padding-t-0">Request could not be submitted</h2><h3 class="text-center padding-t-md-3 padding-t-0"><a href="javascript: void(0)" onclick="return slidein();">Try again</a></h3><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-frown"></i></h2>';
 			document.getElementById('thank-pop').style.display = 'initial';
 			document.getElementById('name').removeAttribute('readonly');
 			document.getElementById('phone').removeAttribute('readonly');
@@ -488,15 +471,15 @@
 			</ul>
 		</nav>
 		<div class="banner-content boom-mt boom-opacity" onload="boom();">
-			<h1 class="banner-title pt-5 text-white">
+			<h1 class="banner-title padding-t-5 text-white">
 				Corrugated Boxes Tailored to your Needs!
 			</h1>
-			<div class="width-changer banner-caption pb-0">
-				<p class="mb-0"><i class="fas fa-boxes"></i> We manufacture all types of corrugated boxes.</p><p class="mb-lg-0"><i class="fab fa-envira"></i> Get products that are environment friendly!<ul class="banner-caption list-unstyled"><li><i class="fas fa-recycle"></i> Recyclable</li><li><i class="fas fa-dumbbell"></i> Sustainable</li><li><i class="fas fa-users-cog"></i> Customisable</li></ul></p>
+			<div class="width-changer banner-caption padding-b-0">
+				<p class="margin-b-0"><i class="fas fa-boxes"></i> We manufacture all types of corrugated boxes.</p><p class="margin-b-lg-0"><i class="fab fa-envira"></i> Get products that are environment friendly!<ul class="banner-caption list-unstyled"><li><i class="fas fa-recycle"></i> Recyclable</li><li><i class="fas fa-dumbbell"></i> Sustainable</li><li><i class="fas fa-users-cog"></i> Customisable</li></ul></p>
 			</div>
 			
 
-			<div class="pt-2 pb-sm-4 pb-3"><div class="mr-lg-5 pr-lg-5"><a href="contact" class="mr-lg-5 btn banner-btn">Contact Us</a></div></div>
+			<div class="padding-t-2 padding-b-sm-4 padding-b-3"><div class="margin-r-lg-5 padding-r-lg-5"><a href="contact" class="margin-r-lg-5 btn banner-btn">Contact Us</a></div></div>
 
 		</div>
 
@@ -512,38 +495,32 @@
 
 <div class="position-fixed contact-pop" id="contact-pop">
 	
-	<div class="position-fixed bg-white" id="thank-pop"><h2 class=" subname pt-md-3 pr-md-3 pt-1 pr-1 proud-client text-right close-pop color-orange" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center pt-md-3 pt-0">Thank You</h2><h2 class="text-center pt-md-1 pt-0">for contacting us!</h2><h2 class="text-center pt-md-3 pt-0">We will get back to you on your given contact details!</h2><h2 class="text-center pt-lg-4 pt-md-2 pt-1 mt-lg-2 mt-0 thank-pop-smile color-orange"><i class="far fa-grin-alt"></i></h2></div>
+	<div class="position-fixed bg-white" id="thank-pop"><h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop color-orange" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile color-orange"><i class="far fa-grin-alt"></i></h2></div>
 
 	<div class="row">
-		<h2 class=" subname pt-2 pb-2 proud-client col-10" id="pop-subname">Contact Us</h2>
-		<h2 class=" subname pt-2 pb-2 proud-client col-2 text-center close-pop color-orange" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
+		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-10" id="pop-subname">Contact Us</h2>
+		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-2 text-center close-pop color-orange" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
 	</div>
 	
-	<form class="ev_form mt-0 mb-3" autocomplete="off" id="pop-form" action="javascript: void(0)" onsubmit="return formSubmit();">
-        <div class="form-group mb-1">
+	<form class="ev_form margin-t-0 margin-b-3" autocomplete="off" id="pop-form" action="javascript: void(0)" onsubmit="return formSubmit();">
+        <div class="form-group margin-b-1">
             <div class="form-required-show">
                 <span class="form-required">* is for required.</span>
             </div>
             <label for="name">Name<span class="form-required"> *</span></label>
-            <input type="text" id="name" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
-            <label for="country">Mobile Number<span class="form-required"> *</span></label>
-            <div class="form-row">
-            	<div class="form-group col-2 mb-0">
-            		<input type="tel" title="Please enter country code Ex. +91" pattern="[+][0-9]{1,2}" id="country" class="mb-2 mt-lg-1 form-control pop-contact-input px-sm-2 px-1" placeholder="+91" autocomplete="off" value="+91" required>
-            	</div>
-            	<div class="form-group pl-sm-1 pl-0 col-10 mb-0">
-            		<input type="tel" id="phone" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
-            	</div>
-            </div>
+            <input type="text" id="name" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
+            <label for="phone">Mobile Number<span class="form-required"> *</span></label>
+            <input type="tel" pattern="[+987][0-9]{9,12}" id="phone" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
+        	</br>
             <label for="email">Email Address</label>
-            <input type="email" id="email" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
+            <input type="email" id="email" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
             </br>
             <label for="message">Message</label><br>
-            <textarea id="message" class="mb-1 mt-lg-1 form-control pop-contact-input pop-txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
+            <textarea id="message" class="margin-b-1 margin-t-lg-1 form-control pop-contact-input pop-txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
             <br>
 
 
-            <button class="btn py-1" id="pop-submit" type="submit" name="sub_form">Submit</button>
+            <button class="btn padding-y-1" id="pop-submit" type="submit" name="sub_form">Submit</button>
 
 
         </div>
@@ -553,60 +530,60 @@
 
 
 
-<div class="container py-4">
-	<h2 class="text-center pb-4 pb-md-3 home-about-title boom-opacity font-weight-bold">Our Services</h2>
+<div class="container padding-y-4">
+	<h2 class="text-center padding-b-4 padding-b-md-3 home-about-title boom-opacity font-weight-bold">Our Services</h2>
 	<div class="row">
 		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
-			<div class="mx-auto services-cards mb-4 mb-sm-5">
+			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service1">
 					<div class="position-absolute service-try d-block" id="try1"></div>
-					<div class="row pt-5">
+					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-globe"></i></div></div>
-						<div class="col-12 px-3 text-center services-title my-0"><label for="expand1">Export Quality Cartons</label></div>
+						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Export Quality Cartons</label></div>
 					</div>
 
-					<div class="container text-center services-para pt-lg-4 py-2 service-no pb-sm-5">We provide export quality corrugated cartons mainly used for export of fisheries, fruits, vegetables, mechanical equipments, etc.</div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We provide export quality corrugated cartons mainly used for export of fisheries, fruits, vegetables, mechanical equipments, etc.</div>
 				</div>
 			</div>
 			
 		</div>
 		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
 			
-			<div class="mx-auto services-cards mb-4 mb-sm-5">
+			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service2">
 					<div class="position-absolute service-try d-block" id="try2"></div>
-					<div class="row pt-5">
+					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-user-cog"></i></div></div>
-						<div class="col-12 px-3 text-center services-title my-0"><label for="expand1">Customized Cartons</label></div>
+						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Customized Cartons</label></div>
 					</div>
 
-					<div class="container text-center services-para pt-lg-4 py-2 service-no pb-sm-5">We understand your requirements and provide corrugated boxes and sheets as per your specifications with best in class quality.</div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We understand your requirements and provide corrugated boxes and sheets as per your specifications with best in class quality.</div>
 				</div>
 			</div>
 			
 		</div>
 		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity d-block d-md-none d-lg-block">
 			
-			<div class="mx-auto services-cards mb-4 mb-sm-5">
+			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service3">
 					<div class="position-absolute service-try d-block" id="try3"></div>
-					<div class="row pt-5">
+					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-scroll"></i></div></div>
-						<div class="col-12 px-3 text-center services-title my-0"><label for="expand1">Finest Corrugated Sheets</label></div>
+						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Finest Corrugated Sheets</label></div>
 					</div>
 
-					<div class="container text-center services-para pt-lg-4 py-2 service-no pb-sm-5">We provide exclusive corrugated sheets as per your required size and specifications. Our size range is __ to __.</div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We provide exclusive corrugated sheets as per your required size and specifications. Our size range is __ to __.</div>
 				</div>
 			</div>
 			
 		</div>
 		
 	</div>
-	<div class="pb-sm-4"><div class="text-right"><a href="services" class="mr-lg-5 btn ser-btn banner-btn">More Services</a></div></div>
+	<div class="padding-b-sm-4"><div class="text-right"><a href="services" class="margin-r-lg-5 btn ser-btn banner-btn">More Services</a></div></div>
 </div>
 
 <script type="text/javascript">
@@ -658,11 +635,11 @@
 
 
 
-<div class="container py-4">
+<div class="container padding-y-4">
 	
 	<div class="row align-items-center justify-content-between boom-opacity boom-mt">
-		<div class="col-12 col-md-6 pb-4 pb-md-0">
-			<h2 class="text-center pb-4 pb-md-3 home-about-title boom-opacity font-weight-bold">Who We Are</h2>
+		<div class="col-12 col-md-6 padding-b-4 padding-b-md-0">
+			<h2 class="text-center padding-b-4 padding-b-md-3 home-about-title boom-opacity font-weight-bold">Who We Are</h2>
 			<div class="home-profile-info text-center text-md-left boom-mt boom-opacity">
 				<p class="boom-opacity home-about-para">At Prerana Enterprises, quality and customer satisfaction are our primary focus. We manufacture eco-friendly products which are both, cost-effective and customisable.</p>
 				<p class="home-about-para d-block d-lg-block d-md-none">We manufacture corrugated boxes according to your requirement and specification and make sure you get the best out of it. We are the leading corrugated boxes manufacturer in Ratnagiri, Raigad, Panvel and Navi Mumbai.</p>
@@ -674,7 +651,7 @@
 						
 					</div>
 					<div class="exp-unit-area">
-						<h4 class="mb-0">Years<span class="exp-unit-2 pt-1">Of Experience</span></h4>
+						<h4 class="margin-b-0">Years<span class="exp-unit-2 padding-t-1">Of Experience</span></h4>
 					</div>
 				</div>
 			</div>
@@ -690,7 +667,7 @@
 <!--
 
 <div class="aboutus-bg">
-	<h2 class="text-center subname pt-3 pb-md-5 pb-4 proud-client boom-opacity">More About Us</h2>
+	<h2 class="text-center subname padding-t-3 pb-md-5 padding-b-4 proud-client boom-opacity">More About Us</h2>
 
 	<div class="row home-product text-center pb-5">
 		<div class="col-md-5 col-12 boom-opacity">
@@ -703,9 +680,9 @@
 			</div>
 		</div>
 		<div class="col-md-7 col-12">
-			<div class="home-profile-info text-justify mr-md-4 ml-md-0 mx-3 pt-md-0 pt-2 boom-mt">
-				<p class="boom-opacity">Here at Prerana Enterprises, we're all about <i>cardboard</i>. And for us, it's never <i>just a box</i>. Each box we manufacture is of outstanding quality and eco-friendly!</p><p class="mb-2 boom-opacity">If you are looking for custom-printed packaging boxes or plain corrugated boxes, this is the precise place. We manufacture content-protecting, brand-enhancing, sustainable packaging boxes that will help your products to stand-out and get noticed thus increasing your sale. Our boxes offer sustainability and reliability helping you sell more and worry less.</p>
-				<div class="mr-sm-5 text-right mt-0"><a href="about" class="py-1 btn btn-dark home-profile-info">More About Us!</a></div>
+			<div class="home-profile-info text-justify mr-md-4 ml-md-0 mx-3 pt-md-0 padding-t-2 boom-mt">
+				<p class="boom-opacity">Here at Prerana Enterprises, we're all about <i>cardboard</i>. And for us, it's never <i>just a box</i>. Each box we manufacture is of outstanding quality and eco-friendly!</p><p class="margin-b-2 boom-opacity">If you are looking for custom-printed packaging boxes or plain corrugated boxes, this is the precise place. We manufacture content-protecting, brand-enhancing, sustainable packaging boxes that will help your products to stand-out and get noticed thus increasing your sale. Our boxes offer sustainability and reliability helping you sell more and worry less.</p>
+				<div class="mr-sm-5 text-right margin-t-0"><a href="about" class="padding-y-1 btn btn-dark home-profile-info">More About Us!</a></div>
 			</div>
 		</div>
 	</div>
@@ -716,44 +693,44 @@
 
 
 <div class="home-goals">
-	<h2 class="text-center subname pt-3 pb-md-4 pb-4 text-white boom-opacity">Our Primary Goals</h2>
-	<div class="container home-goal pb-4">
+	<h2 class="text-center subname padding-t-3 pb-md-4 padding-b-4 text-white boom-opacity">Our Primary Goals</h2>
+	<div class="container home-goal padding-b-4">
 		<div class="row">
 			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-thumbs-up"></i></div>
-					<div class="col-11 text-justify pb-2">Provide high-quality, reliable corrugated boxes.</div>
+					<div class="col-11 text-justify padding-b-2">Provide high-quality, reliable corrugated boxes.</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-rupee-sign"></i></div>
-					<div class="col-11 text-justify pb-2">Provide affordable solutions to clients.</div>
+					<div class="col-11 text-justify padding-b-2">Provide affordable solutions to clients.</div>
 				</div>
 			</div>
 
 			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-handshake"></i></div>
-					<div class="col-11 text-justify pb-2">Create and cultivate long-term relationship with clients.</div>
+					<div class="col-11 text-justify padding-b-2">Create and cultivate long-term relationship with clients.</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-bolt"></i></div>
-					<div class="col-11 text-justify pb-2">Respond immediately to the changing needs of our clients.</div>
+					<div class="col-11 text-justify padding-b-2">Respond immediately to the changing needs of our clients.</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-smile"></i></div>
-					<div class="col-11 text-justify pb-2">Achieve complete customer satisfaction.</div>
+					<div class="col-11 text-justify padding-b-2">Achieve complete customer satisfaction.</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-12 boom-opacity">
 				<div class="row">
 					<div class="col-1 text-right mx-0 px-0"><i class="fas fa-chart-line"></i></div>
-					<div class="col-11 text-justify pb-2">Improve our services continuously.</div>
+					<div class="col-11 text-justify padding-b-2">Improve our services continuously.</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-12 boom-opacity">
@@ -777,11 +754,11 @@
 
 <div class="proudy">
 	<div class="proudy">
-		<h2 class="text-center pb-4 pt-4 pb-md-3 home-about-title boom-opacity font-weight-bold">Our Proud Clients</h2>
+		<h2 class="text-center padding-b-4 padding-t-4 padding-b-md-3 home-about-title boom-opacity font-weight-bold">Our Proud Clients</h2>
 
-		<div class="pb-4 pt-2">
+		<div class="padding-b-4 padding-t-2">
 
-			<div class="client-strip py-4">
+			<div class="client-strip padding-y-4">
 			
 				<div class="img-strip" id="img-strip">
 					<div class="image-move"><img src="images/l1.png" class="img-client-home" alt="Prerana Enterprises" onload="dyheight();"></div>
@@ -808,47 +785,10 @@
 	</div>
 
 
-	<h2 class="text-center pb-4 pb-md-3 home-about-title boom-opacity font-weight-bold">Client Testimonials<br><i class="fas fa-quote-left testimonial-quotes"></i></h2>
-
-	<div class="container pb-4">
-	    <div id="testimonials" class="carousel slide" data-ride="carousel" data-interval="4000">
-	    	<ol class="carousel-indicators mb-0">
-			    <li data-target="#testimonials" data-slide-to="0" class="active"></li>
-			    <li data-target="#testimonials" data-slide-to="1"></li>
-			    <li data-target="#testimonials" data-slide-to="2"></li>
-			    <li data-target="#testimonials" data-slide-to="3"></li>
-			</ol>
-	        <div class="carousel-inner" role="listbox">
-	            <div class="carousel-item active text-center p-4">
-	            	<h5 class="testimonial-height" id="longest">Supported our business since initial stage and also suggested varous innovative, suitable packaging ideas.<wbr> Effort on product development is noticable.<wbr> Helpful in all aspects.<wbr> It's a long-term association!</h5>
-	                <p class="testimonial-name">- <b class="cite"><i>Akar Pot Art</i></b><br></p>
-	            </div>
-	        	<div class="carousel-item active text-center p-4">
-	            	<h5 class="testimonial-height">In time delivery and in good condition too!<wbr> We appreciate the quality and service provided by Prerana Enterprises who provided the same quality material in time for more than 10 years</h5>
-	                <p class="testimonial-name">- <b class="cite"><i>Delight Bulb Industry</i></b><br></p>
-	            </div>
-	            <div class="carousel-item active text-center p-4">
-	            	<h5 class="testimonial-height">Excellent and Timely Service with Good Management.<br>Very Good!</h5>
-	                <p class="testimonial-name">- <b>Varun Mahaajan</b> <b class="cite"><i>(Mahaajan Beverage)</i></b><br></p>
-	            </div>
-	            <div class="carousel-item text-center p-4">
-	            	<h5 class="testimonial-height">Lots of Varieties and Cost Effective.<br>Impressive!</h5>
-	                <p class="testimonial-name">- <b>Manoj Gujar</b> <b class="cite"><i>(Mangoes Trader)</i></b><br></p>
-	            </div>
-	        </div>
-	        <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
-	            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	            <span class="sr-only">Previous</span>
-	        </a>
-	        <a class="carousel-control-next" href="#testimonials" role="button" data-slide="next">
-	            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	            <span class="sr-only">Next</span>
-	        </a>
-	    </div>
-	</div>
+	
 
 
-	<div class="container text-right"><p class="text-center home-happy boom-opacity pb-4 mb-0"><i><b>We are happy to serve many more food, consumer goods and edible oil industries across Ratnagiri, Raigad, Panvel and Navi Mumbai.</b></i></p></div>
+	<div class="container text-right"><p class="text-center home-happy boom-opacity padding-b-4 margin-b-0"><i><b>We are happy to serve many more food, consumer goods and edible oil industries across Ratnagiri, Raigad, Panvel and Navi Mumbai.</b></i></p></div>
 </div>
 
 
@@ -899,72 +839,66 @@
 
 
 <footer class="footer" id="full-footer">
-	<div class="main-footer pt-3">
+	<div class="main-footer padding-t-3">
 		<div class="container">
 			<div class="row">
 
 
-				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt boom-opacity">
-					<div class="ml-sm-3 ml-lg-0 ml-0 text-left mb-2 mb-sm-3 footer-head"><b>Services</b></div>
+				<div class="col-lg-4 col-sm-6 col-12 padding-b-sm-0 padding-b-4 boom-mt boom-opacity">
+					<div class="margin-l-sm-3 margin-l-lg-0 margin-l-0 text-left margin-b-2 margin-b-sm-3 footer-head"><b>Services</b></div>
 					<div class="row footer-data">
-						<div class="col-12 text-left mb-2">We have expertise in providing corrugated boxes to the following sectors:</div>
+						<div class="col-12 text-left margin-b-2">We have expertise in providing corrugated boxes to the following sectors:</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Exports</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Exports</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Consumer Goods</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Consumer Goods</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Fisheries</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Fisheries</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Fruits & Vegetables</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Fruits & Vegetables</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Oil/Edible Oil</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Oil/Edible Oil</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Agro-chemical Industry</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Agro-chemical Industry</div>
 					</div>
 				</div>
 
 
 
-				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt boom-opacity">
-					<div class="ml-sm-3 ml-0 mb-3 footer-head text-left"><b>Reach Out To Us</b></div>
+				<div class="col-lg-4 col-sm-6 col-12 padding-b-sm-0 padding-b-4 boom-mt boom-opacity">
+					<div class="margin-l-sm-3 margin-l-0 margin-b-3 footer-head text-left"><b>Reach Out To Us</b></div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="far fa-id-card"></i></div>
-						<div class="col-sm-10 col-9 mb-2">Anand Karmarkar<br>Shubham Karmarkar</div>
+						<div class="col-sm-10 col-9 margin-b-2">Anand Karmarkar<br>Shubham Karmarkar</div>
 					</div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="fas fa-mobile-alt"></i></div>
-						<div class="col-sm-10 col-9 mb-2">+91 9422430226<br>+91 9561983034</div>
+						<div class="col-sm-10 col-9 margin-b-2">+91 9422430226<br>+91 9561983034</div>
 					</div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="far fa-envelope"></i></div>
-						<div class="col-sm-10 col-9 mb-2">shubham@preranaenterprises.in</div>
+						<div class="col-sm-10 col-9 margin-b-2">shubham@preranaenterprises.in</div>
 					</div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="fas fa-store-alt"></i></div>
-						<div class="col-sm-10 col-9 mb-2 footer-address">At Gavhe,<wbr>Post & Tal. Dapoli,<br>Dist. Ratnagiri</div>
+						<div class="col-sm-10 col-9 margin-b-2 footer-address">At Gavhe,<wbr>Post & Tal. Dapoli,<br>Dist. Ratnagiri</div>
 					</div>
-					<div class="text-center text-md-left pb-2 pl-md-5">
-						<a href="https://wa.me/919561983034" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i></a>
-						<a href="https://g.page/prerana-enterprises-dapoli?share" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i></a>
-						<a href="https://www.linkedin.com/company/68643143/admin/" class="btn py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social footer-social-linkedin text-white"><i class="fab fa-linkedin-in"></i></a>
-						<a href="https://www.facebook.com/pedapoli/" class="btn py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social footer-social-facebook text-white"><i class="fab fa-facebook"></i></a>
+					<div class="text-center text-md-left padding-b-2 padding-l-md-5">
+						<a href="https://wa.me/919561983034" class="btn btn-success padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social"><i class="fab fa-whatsapp"></i></a>
+						<a href="https://g.page/prerana-enterprises-dapoli?share" class="btn btn-light padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social"><i class="fas fa-map-marker-alt"></i></a>
+						<a href="https://www.linkedin.com/company/68643143/admin/" class="btn padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social footer-social-linkedin text-white"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.facebook.com/pedapoli/" class="btn padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social footer-social-facebook text-white"><i class="fab fa-facebook"></i></a>
 					</div>
 				</div>
 
 
-				<div class="col-lg-4 col-12 pt-sm-0 py-2" id="footer-3">
+				<div class="col-lg-4 col-12 padding-t-sm-0 padding-y-2" id="footer-3">
 					<div class="w-75 mx-auto" id="footer-image-div">
 						<img src="images/2.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
 					</div>
@@ -974,9 +908,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="credit-box py-0 my-0"><div class="text-right credit container py-0 my-0">Website by Abhishek Joshi<br>+919757468857</div></div>
 
-	<div class="copyright small text-center py-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
+	<div class="copyright small text-center padding-y-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
 </footer>
 
 

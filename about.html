@@ -317,7 +317,7 @@
 
 		function formSuccess()
 		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname pt-md-3 pr-md-3 pt-1 pr-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center pt-md-3 pt-0">Thank You</h2><h2 class="text-center pt-md-1 pt-0">for contacting us!</h2><h2 class="text-center pt-md-3 pt-0">We will get back to you on your given contact details!</h2><h2 class="text-center pt-lg-4 pt-md-2 pt-1 mt-lg-2 mt-0 thank-pop-smile text-danger"><i class="far fa-grin-alt"></i></h2>';
+			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-grin-alt"></i></h2>';
 			contact_submit();
 			document.getElementById('name').removeAttribute('readonly');
 			document.getElementById('phone').removeAttribute('readonly');
@@ -329,7 +329,7 @@
 
 		function formError()
 		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname pt-md-3 pr-md-3 pt-1 pr-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center pt-md-3 pt-0">Sorry</h2><h2 class="text-center pt-md-1 pt-0">Request could not be submitted</h2><h3 class="text-center pt-md-3 pt-0"><a href="javascript: void(0)" onclick="return slidein();">Try again</a></h3><h2 class="text-center pt-lg-4 pt-md-2 pt-1 mt-lg-2 mt-0 thank-pop-smile text-danger"><i class="far fa-frown"></i></h2>';
+			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Sorry</h2><h2 class="text-center padding-t-md-1 padding-t-0">Request could not be submitted</h2><h3 class="text-center padding-t-md-3 padding-t-0"><a href="javascript: void(0)" onclick="return slidein();">Try again</a></h3><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-frown"></i></h2>';
 			document.getElementById('thank-pop').style.display = 'initial';
 			document.getElementById('name').removeAttribute('readonly');
 			document.getElementById('phone').removeAttribute('readonly');
@@ -343,7 +343,7 @@
 </head>
 <body>
 
-	<div class="banner pb-2">
+	<div class="banner padding-b-2">
 
 		<nav id="nav">
 			<input type="checkbox" id="check" onchange="black();">
@@ -361,7 +361,7 @@
 		</nav>
 
 		<div class="container">
-			<h1 class="subname pt-2 pb-2 text-white">About Us</h1>
+			<h1 class="subname padding-t-2 padding-b-2 text-white">About Us</h1>
 		</div>
 
 	</div>
@@ -375,38 +375,32 @@
 
 <div class="position-fixed contact-pop" id="contact-pop">
 	
-	<div class="position-fixed bg-white" id="thank-pop"><h2 class=" subname pt-md-3 pr-md-3 pt-1 pr-1 proud-client text-right close-pop color-orange" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center pt-md-3 pt-0">Thank You</h2><h2 class="text-center pt-md-1 pt-0">for contacting us!</h2><h2 class="text-center pt-md-3 pt-0">We will get back to you on your given contact details!</h2><h2 class="text-center pt-lg-4 pt-md-2 pt-1 mt-lg-2 mt-0 thank-pop-smile color-orange"><i class="far fa-grin-alt"></i></h2></div>
+	<div class="position-fixed bg-white" id="thank-pop"><h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop color-orange" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile color-orange"><i class="far fa-grin-alt"></i></h2></div>
 
 	<div class="row">
-		<h2 class=" subname pt-2 pb-2 proud-client col-10" id="pop-subname">Contact Us</h2>
-		<h2 class=" subname pt-2 pb-2 proud-client col-2 text-center close-pop color-orange" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
+		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-10" id="pop-subname">Contact Us</h2>
+		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-2 text-center close-pop color-orange" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
 	</div>
 	
-	<form class="ev_form mt-0 mb-3" autocomplete="off" id="pop-form" action="javascript: void(0)" onsubmit="return formSubmit();">
-        <div class="form-group mb-1">
+	<form class="ev_form margin-t-0 margin-b-3" autocomplete="off" id="pop-form" action="javascript: void(0)" onsubmit="return formSubmit();">
+        <div class="form-group margin-b-1">
             <div class="form-required-show">
                 <span class="form-required">* is for required.</span>
             </div>
             <label for="name">Name<span class="form-required"> *</span></label>
-            <input type="text" id="name" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
-            <label for="country">Mobile Number<span class="form-required"> *</span></label>
-            <div class="form-row">
-            	<div class="form-group col-2 mb-0">
-            		<input type="tel" title="Please enter country code Ex. +91" pattern="[+][0-9]{1,2}" id="country" class="mb-2 mt-lg-1 form-control pop-contact-input px-sm-2 px-1" placeholder="+91" autocomplete="off" value="+91" required>
-            	</div>
-            	<div class="form-group col-10 mb-0 pl-sm-1 pl-0">
-            		<input type="tel" id="phone" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
-            	</div>
-            </div>
+            <input type="text" id="name" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
+            <label for="phone">Mobile Number<span class="form-required"> *</span></label>
+            <input type="tel" pattern="[+987][0-9]{9,12}" id="phone" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
+        	</br>
             <label for="email">Email Address</label>
-            <input type="email" id="email" class="mb-2 mt-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
+            <input type="email" id="email" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
             </br>
             <label for="message">Message</label><br>
-            <textarea id="message" class="mb-1 mt-lg-1 form-control pop-contact-input pop-txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
+            <textarea id="message" class="margin-b-1 margin-t-lg-1 form-control pop-contact-input pop-txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
             <br>
 
 
-            <button class="btn py-1" id="pop-submit" type="submit" name="sub_form">Submit</button>
+            <button class="btn padding-y-1" id="pop-submit" type="submit" name="sub_form">Submit</button>
 
 
         </div>
@@ -418,10 +412,10 @@
 
 <div class="container py-5" onload="boom();">
 	<div class="row align-items-center justify-content-between">
-		<div class="col-12 col-md-7 col-lg-8 pb-4 pb-md-0">
+		<div class="col-12 col-md-7 col-lg-8 padding-b-4 padding-b-md-0">
 			<div class="home-profile-info text-center text-md-left boom-mt boom-opacity about-info">
-				<p class="boom-opacity">Prerana Enterprises is all about <i>corrugation</i>. And for us, it's never <i>just a box</i>. Each box we manufacture is of outstanding quality and eco-friendly!</p><p class="mb-2 boom-opacity">If you are looking for custom-printed corrugated packing material, this is the precise place. We manufacture content-protecting, brand-enhancing, sustainable packaging boxes that will help your products to stand-out and get noticed thus increasing your sale. Our boxes offer sustainability and reliability helping you sell more and worry less.</p>
-				<p class="mb-2 boom-opacity">Since its founding at Goregaon (Mumbai) in 1985 and later moving to Dapoli in 1998 for expansion purpose, Prerana Enterprises has developed exponentially to become a leading supplier of Corrugated Boxes (Paper Board Cartons), in Ratnagiri, Raigad, Panvel and Navi Mumbai.</p>
+				<p class="boom-opacity">Prerana Enterprises is all about <i>corrugation</i>. And for us, it's never <i>just a box</i>. Each box we manufacture is of outstanding quality and eco-friendly!</p><p class="margin-b-2 boom-opacity">If you are looking for custom-printed corrugated packing material, this is the precise place. We manufacture content-protecting, brand-enhancing, sustainable packaging boxes that will help your products to stand-out and get noticed thus increasing your sale. Our boxes offer sustainability and reliability helping you sell more and worry less.</p>
+				<p class="margin-b-2 boom-opacity">Since its founding at Goregaon (Mumbai) in 1985 and later moving to Dapoli in 1998 for expansion purpose, Prerana Enterprises has developed exponentially to become a leading supplier of Corrugated Boxes (Paper Board Cartons), in Ratnagiri, Raigad, Panvel and Navi Mumbai.</p>
 				<p class="boom-opacity"><a href="data/Prerana Enterprises Company Profile.pdf" download>Click to download our company profile!</a></p>
 			</div>
 		</div>
@@ -435,20 +429,20 @@
 	<div class="container">
 		<div class="row" id="scroll-trigger">
 			<div class="col-md-3 col-6 text-center">
-				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="20">0</span>+</b></p>
-				<p class="text-white mb-md-0 mb-5 scroll-info"><b>Happy Clients</b></p>
+				<p class="text-white mb-md-3 margin-b-2 scroll-values"><b><span class="scroll" value="20">0</span>+</b></p>
+				<p class="text-white margin-b-md-0 mb-5 scroll-info"><b>Happy Clients</b></p>
 			</div>
 			<div class="col-md-3 col-6 text-center">
-				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="25">0</span> Years</b></p>
-				<p class="text-white mb-md-0 mb-5 scroll-info"><b>Experience</b></p>
+				<p class="text-white mb-md-3 margin-b-2 scroll-values"><b><span class="scroll" value="25">0</span> Years</b></p>
+				<p class="text-white margin-b-md-0 mb-5 scroll-info"><b>Experience</b></p>
 			</div>
 			<div class="col-md-3 col-6 text-center">
-				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="1500">0</span> kg/day</b></p>
-				<p class="text-white mb-0 scroll-info"><b>Working Capacity</b></p>
+				<p class="text-white mb-md-3 margin-b-2 scroll-values"><b><span class="scroll" value="1500">0</span> kg/day</b></p>
+				<p class="text-white margin-b-0 scroll-info"><b>Working Capacity</b></p>
 			</div>
 			<div class="col-md-3 col-6 text-center">
-				<p class="text-white mb-md-3 mb-2 scroll-values"><b><span class="scroll" value="50">0</span></b></p>
-				<p class="text-white mb-0 scroll-info"><b>Jobs Provided</b></p>
+				<p class="text-white mb-md-3 margin-b-2 scroll-values"><b><span class="scroll" value="50">0</span></b></p>
+				<p class="text-white margin-b-0 scroll-info"><b>Jobs Provided</b></p>
 			</div>
 		</div>
 	</div>
@@ -457,17 +451,17 @@
 
 
 <div>
-	<div class="quote py-4">
+	<div class="quote padding-y-4">
 		<div class="container">
-			<h2 class="text-center pb-4 pb-md-3 home-about-title boom-opacity font-weight-bold">Awards Won</h2>
+			<h2 class="text-center padding-b-4 padding-b-md-3 home-about-title boom-opacity font-weight-bold">Awards Won</h2>
 		</div>
 		<div class="container about-awards">
-			<blockquote class="blockquote pb-3 text-center">
-				<p class="mb-0 boom-mt boom-opacity">“M/s Prerana Enterprises receives an Industrial Excellence Award for Rural Development”</p>
+			<blockquote class="blockquote padding-b-3 text-center">
+				<p class="margin-b-0 boom-mt boom-opacity">“M/s Prerana Enterprises receives an Industrial Excellence Award for Rural Development”</p>
 				<footer class="blockquote-footer">Delhi, <cite title="Source Title">2004</cite></footer>
 			</blockquote>
-			<blockquote class="blockquote pb-3 text-center">
-				<p class="mb-0 boom-mt boom-opacity">“M/s Prerana Enterprises receives a Best Small Scale Industry Award from District Industry Centre for 2004”</p>
+			<blockquote class="blockquote padding-b-3 text-center">
+				<p class="margin-b-0 boom-mt boom-opacity">“M/s Prerana Enterprises receives a Best Small Scale Industry Award from District Industry Centre for 2004”</p>
 				<footer class="blockquote-footer">Ratnagiri, <cite title="Source Title">2004</cite></footer>
 			</blockquote>
 		</div>
@@ -482,72 +476,66 @@
 
 
 <footer class="footer" id="full-footer">
-	<div class="main-footer pt-3">
+	<div class="main-footer padding-t-3">
 		<div class="container">
 			<div class="row">
 
 
-				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt boom-opacity">
-					<div class="ml-sm-3 ml-lg-0 ml-0 text-left mb-2 mb-sm-3 footer-head"><b>Services</b></div>
+				<div class="col-lg-4 col-sm-6 col-12 padding-b-sm-0 padding-b-4 boom-mt boom-opacity">
+					<div class="margin-l-sm-3 margin-l-lg-0 margin-l-0 text-left margin-b-2 margin-b-sm-3 footer-head"><b>Services</b></div>
 					<div class="row footer-data">
-						<div class="col-12 text-left mb-2">We have expertise in providing corrugated boxes to the following sectors:</div>
+						<div class="col-12 text-left margin-b-2">We have expertise in providing corrugated boxes to the following sectors:</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Exports</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Exports</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Consumer Goods</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Consumer Goods</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Fisheries</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Fisheries</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Fruits & Vegetables</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Fruits & Vegetables</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Oil/Edible Oil</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Oil/Edible Oil</div>
 					</div>
-					<div class="row footer-data px-3">
-						<div class="col-sm-1 d-none col-auto text-right pr-0 mr-0"></div>
-						<div class="col-12 mb-2 mb-md-0 pl-0 text-left">Agro-chemical Industry</div>
+					<div class="row footer-data padding-x-3">
+						<div class="col-12 margin-b-2 margin-b-md-0 padding-l-0 text-left">Agro-chemical Industry</div>
 					</div>
 				</div>
 
 
 
-				<div class="col-lg-4 col-sm-6 col-12 pb-sm-0 pb-4 boom-mt boom-opacity">
-					<div class="ml-sm-3 ml-0 mb-3 footer-head text-left"><b>Reach Out To Us</b></div>
+				<div class="col-lg-4 col-sm-6 col-12 padding-b-sm-0 padding-b-4 boom-mt boom-opacity">
+					<div class="margin-l-sm-3 margin-l-0 margin-b-3 footer-head text-left"><b>Reach Out To Us</b></div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="far fa-id-card"></i></div>
-						<div class="col-sm-10 col-9 mb-2">Anand Karmarkar<br>Shubham Karmarkar</div>
+						<div class="col-sm-10 col-9 margin-b-2">Anand Karmarkar<br>Shubham Karmarkar</div>
 					</div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="fas fa-mobile-alt"></i></div>
-						<div class="col-sm-10 col-9 mb-2">+91 9422430226<br>+91 9561983034</div>
+						<div class="col-sm-10 col-9 margin-b-2">+91 9422430226<br>+91 9561983034</div>
 					</div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="far fa-envelope"></i></div>
-						<div class="col-sm-10 col-9 mb-2">shubham@preranaenterprises.in</div>
+						<div class="col-sm-10 col-9 margin-b-2">shubham@preranaenterprises.in</div>
 					</div>
 					<div class="row footer-data">
 						<div class="col-sm-2 col-1 text-sm-right text-left"><i class="fas fa-store-alt"></i></div>
-						<div class="col-sm-10 col-9 mb-2 footer-address">At Gavhe,<wbr>Post & Tal. Dapoli,<br>Dist. Ratnagiri</div>
+						<div class="col-sm-10 col-9 margin-b-2 footer-address">At Gavhe,<wbr>Post & Tal. Dapoli,<br>Dist. Ratnagiri</div>
 					</div>
-					<div class="text-center text-md-left pb-2 pl-md-5">
-						<a href="https://wa.me/919561983034" class="btn btn-success py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fab fa-whatsapp"></i></a>
-						<a href="https://g.page/prerana-enterprises-dapoli?share" class="btn btn-light py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social"><i class="fas fa-map-marker-alt"></i></a>
-						<a href="https://www.linkedin.com/company/68643143/admin/" class="btn py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social footer-social-linkedin text-white"><i class="fab fa-linkedin-in"></i></a>
-						<a href="https://www.facebook.com/pedapoli/" class="btn py-0 px-1 ml-sm-2 mx-2 mt-1 footer-social footer-social-facebook text-white"><i class="fab fa-facebook"></i></a>
+					<div class="text-center text-md-left padding-b-2 padding-l-md-5">
+						<a href="https://wa.me/919561983034" class="btn btn-success padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social"><i class="fab fa-whatsapp"></i></a>
+						<a href="https://g.page/prerana-enterprises-dapoli?share" class="btn btn-light padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social"><i class="fas fa-map-marker-alt"></i></a>
+						<a href="https://www.linkedin.com/company/68643143/admin/" class="btn padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social footer-social-linkedin text-white"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.facebook.com/pedapoli/" class="btn padding-y-0 padding-x-1 margin-l-sm-2 margin-x-2 margin-t-1 footer-social footer-social-facebook text-white"><i class="fab fa-facebook"></i></a>
 					</div>
 				</div>
 
 
-				<div class="col-lg-4 col-12 pt-sm-0 py-2" id="footer-3">
+				<div class="col-lg-4 col-12 padding-t-sm-0 padding-y-2" id="footer-3">
 					<div class="w-75 mx-auto" id="footer-image-div">
 						<img src="images/2.png" class="position-absolute" id="footer-image" alt="Prerana Enterprises" onload="dyheight();">
 					</div>
@@ -557,9 +545,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="credit-box py-0 my-0"><div class="text-right credit container py-0 my-0">Website by Abhishek Joshi<br>+919757468857</div></div>
+	<div class="credit-box padding-y-0 margin-y-0"><div class="text-right credit container padding-y-0 margin-y-0">Website by Abhishek Joshi<br>+919757468857</div></div>
 
-	<div class="copyright small text-center py-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
+	<div class="copyright small text-center padding-y-1"><i class="far fa-copyright"></i> 2020 Prerana Enterprises. All rights reserved.</div>
 </footer>
 
 
