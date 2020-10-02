@@ -2607,6 +2607,11 @@ label #bars
 	margin-top: 0.25rem;
 }
 
+.margin-t-3
+{
+	margin-top: 1rem;
+}
+
 .margin-b-0, .margin-y-0
 {
 	margin-bottom: 0;
@@ -3333,4 +3338,16 @@ label #bars
 .service-data:hover:before
 {
 	transform: scaleY(1);
+}
+
+.enroll-button
+{
+	background: #001b5e;
+	color: #fff;
+}
+
+.enroll-button:hover
+{
+	background: #eee;
+	color: #000;
 }
