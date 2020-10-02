@@ -241,6 +241,8 @@
 				}
 			}
 
+			console.log('The errors are intentional. They will stop once page is fully loaded :)');
+
 			page_height();
 
 		}
@@ -396,7 +398,7 @@
 			document.getElementById('message').setAttribute('readonly', '');
 			document.getElementById('pop-submit').setAttribute('disabled', '');
 			var name = document.getElementById('name').value;
-			var phone = document.getElementById('country').value + ' ' + document.getElementById('phone').value;
+			var phone = document.getElementById('phone').value;
 			var email = document.getElementById('email').value;
 			var message = document.getElementById('message').value;
 			if(email=="")
@@ -461,13 +463,13 @@
 			<label for="check">
 				<i class="fas fa-bars" id="bars"></i>
 			</label>
-			<a href="#"><img src="images/2.png" id="logo-light" alt="Prerana Enterprises Logo"></a>
-			<a href="#"><img src="images/3.png" id="logo-dark" alt="Prerana Enterprises Logo"></a>
+			<a href="javascript: void(0)"><img src="images/2.png" id="logo-light" alt="Prerana Enterprises Logo"></a>
+			<a href="javascript: void(0)"><img src="images/3.png" id="logo-dark" alt="Prerana Enterprises Logo"></a>
 			<ul>
 				<li class="active" id="active"><a class="navbar-item" href="javascript: void(0)"><i class="fas fa-home"></i> Home</a></li>
-				<li><a class="navbar-item" href="about"><i class="fas fa-file-contract"></i> About Us</a></li>
-				<li><a class="navbar-item" href="services"><i class="fas fa-box-open"></i> Our Services</a></li>
-				<li><a class="navbar-item" href="contact"><i class="fas fa-address-card"></i> Contact Us</a></li>
+				<li><a class="navbar-item" href="about.html"><i class="fas fa-file-contract"></i> About Us</a></li>
+				<li><a class="navbar-item" href="courses.html"><i class="fas fa-box-open"></i> Our Courses</a></li>
+				<li><a class="navbar-item" href="contact.html"><i class="fas fa-address-card"></i> Contact Us</a></li>
 			</ul>
 		</nav>
 		<div class="banner-content boom-mt boom-opacity" onload="boom();">
