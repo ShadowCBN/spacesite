@@ -349,118 +349,7 @@
 			}
 		}
 
-		function contact_vis()
-		{
-			var btn = document.getElementById('uni-contact-btn');
-			var icon = document.getElementById('uni-contact-icon');
-				if(window.scrollY>50 && (window.scrollY + window.innerHeight - 200)<document.getElementById('full-footer').offsetTop)
-				{
-					btn.style.display = 'block';
-					icon.style.opacity = '1';
-				}
-				else
-				{
-					icon.style.opacity = '0';
-					setTimeout(function() {
-						btn.style.display = 'none';
-					}, 450);
-				}
-		}
-
-		function slidein()
-		{
-			document.getElementById('name').value = "";
-			document.getElementById('phone').value = "";
-			document.getElementById('email').value = "";
-			document.getElementById('message').value = "";
-			document.getElementById('thank-pop').style.display = 'none';
-			document.getElementById('uni-contact-btn').style.transition = '0.5s';
-			document.getElementById('uni-contact-btn').style.bottom = '-100px';
-			var fs = window.getComputedStyle(document.getElementById('pop-subname'),null).fontSize;
-			document.getElementById('close-pop').style.lineHeight = fs;
-			if(window.innerHeight>849)
-			{
-				document.getElementById('contact-pop').style.bottom = '120px';
-			}
-			else if(window.innerHeight>749)
-			{
-				document.getElementById('contact-pop').style.bottom = '80px';
-			}
-			else
-			{
-				document.getElementById('contact-pop').style.bottom = '20px';
-			}
-			var pop_ht = window.getComputedStyle(document.getElementById('contact-pop'),null).height;
-			document.getElementById('thank-pop').style.height = (parseInt(pop_ht, 10)-9)+'px';
-
-			return false;
-		}
-
-		function slideout()
-		{
-			document.getElementById('contact-pop').style.bottom = '-1000px';
-			if(window.innerWidth<=400)
-			{
-				document.getElementById('uni-contact-btn').style.bottom = '25px';
-			}
-			else
-			{
-				document.getElementById('uni-contact-btn').style.bottom = '30px';
-			}
-			setTimeout(function() {
-				document.getElementById('uni-contact-btn').style.transition = '0s';
-			}, 550);
-		}
-
-		function formSubmit()
-		{
-			document.getElementById('name').setAttribute('readonly', '');
-			document.getElementById('phone').setAttribute('readonly', '');
-			document.getElementById('email').setAttribute('readonly', '');
-			document.getElementById('message').setAttribute('readonly', '');
-			document.getElementById('pop-submit').setAttribute('disabled', '');
-			var name = document.getElementById('name').value;
-			var phone = document.getElementById('phone').value;
-			var email = document.getElementById('email').value;
-			var message = document.getElementById('message').value;
-			if(email=="")
-			{
-				email="null";
-			}
-			document.getElementById('pop-submit').innerHTML = 'Submitting';
-			formSuccess();
-			return false;
-		}
-
-		function contact_submit()
-		{
-			document.getElementById('thank-pop').style.display = 'initial';
-			setTimeout(function() {slideout();},5000);
-		}
-
-		function formSuccess()
-		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-grin-alt"></i></h2>';
-			contact_submit();
-			document.getElementById('name').removeAttribute('readonly');
-			document.getElementById('phone').removeAttribute('readonly');
-			document.getElementById('email').removeAttribute('readonly');
-			document.getElementById('message').removeAttribute('readonly');
-			document.getElementById('pop-submit').removeAttribute('disabled');
-			document.getElementById('pop-submit').innerHTML = 'Submit';
-		}
-
-		function formError()
-		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Sorry</h2><h2 class="text-center padding-t-md-1 padding-t-0">Request could not be submitted</h2><h3 class="text-center padding-t-md-3 padding-t-0"><a href="javascript: void(0)" onclick="return slidein();">Try again</a></h3><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-frown"></i></h2>';
-			document.getElementById('thank-pop').style.display = 'initial';
-			document.getElementById('name').removeAttribute('readonly');
-			document.getElementById('phone').removeAttribute('readonly');
-			document.getElementById('email').removeAttribute('readonly');
-			document.getElementById('message').removeAttribute('readonly');
-			document.getElementById('pop-submit').removeAttribute('disabled');
-			document.getElementById('pop-submit').innerHTML = 'Submit';
-		}
+		
 	</script>
 
 </head>
@@ -484,14 +373,14 @@
 		</nav>
 		<div class="banner-content boom-mt boom-opacity" onload="boom();">
 			<h1 class="banner-title padding-t-5 text-white">
-				Corrugated Boxes Tailored to your Needs!
+				Get Quality Education in Androemeda!
 			</h1>
 			<div class="width-changer banner-caption padding-b-0">
-				<p class="margin-b-0"><i class="fas fa-boxes"></i> We manufacture all types of corrugated boxes.</p><p class="margin-b-lg-0"><i class="fab fa-envira"></i> Get products that are environment friendly!<ul class="banner-caption list-unstyled"><li><i class="fas fa-recycle"></i> Recyclable</li><li><i class="fas fa-dumbbell"></i> Sustainable</li><li><i class="fas fa-users-cog"></i> Customisable</li></ul></p>
+				<p class="margin-b-0"><i class="fas fa-boxes"></i> We have best teachers from many different galaxies.</p><p class="margin-b-lg-0"><i class="fab fa-envira"></i> Gain knowledge that'll make you a pro!<ul class="banner-caption list-unstyled"><li><i class="fas fa-recycle"></i> Cultivation</li><li><i class="fas fa-dumbbell"></i> Expansion</li><li><i class="fas fa-users-cog"></i> Enlightenment</li></ul></p>
 			</div>
 			
 
-			<div class="padding-t-2 padding-b-sm-4 padding-b-3"><div class="margin-r-lg-5 padding-r-lg-5"><a href="contact" class="margin-r-lg-5 btn banner-btn">Contact Us</a></div></div>
+			<div class="padding-t-2 padding-b-sm-4 padding-b-3"><div class="margin-r-lg-5 padding-r-lg-5"><a href="courses.html" class="margin-r-lg-5 btn banner-btn">View Courses</a></div></div>
 
 		</div>
 
@@ -503,41 +392,7 @@
 
 
 
-<div class="position-fixed uni-contact-btn text-center" id="uni-contact-btn" onclick="slidein();"><span class="uni-contact-text position-relative">Contact Us </span> <i class="far fa-comment-dots uni-contact-icon" id="uni-contact-icon"></i></div>
 
-<div class="position-fixed contact-pop" id="contact-pop">
-	
-	<div class="position-fixed bg-white" id="thank-pop"><h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop color-orange" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile color-orange"><i class="far fa-grin-alt"></i></h2></div>
-
-	<div class="row">
-		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-10" id="pop-subname">Contact Us</h2>
-		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-2 text-center close-pop color-orange" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
-	</div>
-	
-	<form class="ev_form margin-t-0 margin-b-3" autocomplete="off" id="pop-form" action="javascript: void(0)" onsubmit="return formSubmit();">
-        <div class="form-group margin-b-1">
-            <div class="form-required-show">
-                <span class="form-required">* is for required.</span>
-            </div>
-            <label for="name">Name<span class="form-required"> *</span></label>
-            <input type="text" id="name" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
-            <label for="phone">Mobile Number<span class="form-required"> *</span></label>
-            <input type="tel" pattern="[+987][0-9]{9,12}" id="phone" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
-        	</br>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
-            </br>
-            <label for="message">Message</label><br>
-            <textarea id="message" class="margin-b-1 margin-t-lg-1 form-control pop-contact-input pop-txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
-            <br>
-
-
-            <button class="btn padding-y-1" id="pop-submit" type="submit" name="sub_form">Submit</button>
-
-
-        </div>
-    </form>
-</div>
 
 
 
@@ -552,10 +407,10 @@
 				<div class="px-auto overflow-hidden service-data" id="service1">
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-globe"></i></div></div>
-						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Export Quality Cartons</label></div>
+						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Cultivation</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We provide export quality corrugated cartons mainly used for export of fisheries, fruits, vegetables, mechanical equipments, etc.</div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We cultivate better thinking and problem-solving abilities among the students. It helps them to approach challenges dynamically and efficiently.</div>
 				</div>
 			</div>
 			
@@ -567,10 +422,10 @@
 				<div class="px-auto overflow-hidden service-data" id="service2">
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-user-cog"></i></div></div>
-						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Customized Cartons</label></div>
+						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Expansion</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We understand your requirements and provide corrugated boxes and sheets as per your specifications with best in class quality.</div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We understand the requirements of the upcoming future and hence, help the students think beyond their imagination and come up with new ideas.</div>
 				</div>
 			</div>
 			
@@ -582,10 +437,10 @@
 				<div class="px-auto overflow-hidden service-data" id="service3">
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-scroll"></i></div></div>
-						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Finest Corrugated Sheets</label></div>
+						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Enlightenment</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We provide exclusive corrugated sheets as per your required size and specifications. Our size range is __ to __.</div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-5">We help our students visualise the intensity of competition that he/she would be facing in real world and prepare them for the same.</div>
 				</div>
 			</div>
 			
@@ -606,8 +461,8 @@
 		<div class="col-12 col-md-6 padding-b-4 padding-b-md-0">
 			<h2 class="text-center padding-b-4 padding-b-md-3 home-about-title boom-opacity font-weight-bold">Who We Are</h2>
 			<div class="home-profile-info text-center text-md-left boom-mt boom-opacity">
-				<p class="boom-opacity home-about-para">At Prerana Enterprises, quality and customer satisfaction are our primary focus. We manufacture eco-friendly products which are both, cost-effective and customisable.</p>
-				<p class="home-about-para d-block d-lg-block d-md-none">We manufacture corrugated boxes according to your requirement and specification and make sure you get the best out of it. We are the leading corrugated boxes manufacturer in Ratnagiri, Raigad, Panvel and Navi Mumbai.</p>
+				<p class="boom-opacity home-about-para">We are an organization found by the Androemeda Educational Society, whose primary aim is to produce the most developed citizens who will benefit the galaxies.</p>
+				<p class="home-about-para d-block d-lg-block d-md-none">Our target is to create curiosity in the minds of students who therefore will help in creation and development of an ideal space society. We also aim to inculcate humane, compassionate and considerate values among our students.</p>
 			</div>
 			<div class="justify-content-center boom-opacity">
 				<div class="exp-show">
@@ -622,7 +477,7 @@
 			</div>
 		</div>
 
-		<div class="col-12 col-md-6 boom-opacity text-center">
+		<div class="col-12 col-md-6 boom-opacity text-center d-md-block d-none">
 			<div><img src="images/144.jpg" alt="About Prerana Enterprises" class="home-about-img"></div>
 		</div>
 	</div>
@@ -646,7 +501,7 @@
 		</div>
 		<div class="col-md-7 col-12">
 			<div class="home-profile-info text-justify margin-r-md-4 margin-l-md-0 margin-x-3 padding-t-md-0 padding-t-2 boom-mt">
-				<p class="boom-opacity">Here at Prerana Enterprises, we're all about <i>cardboard</i>. And for us, it's never <i>just a box</i>. Each box we manufacture is of outstanding quality and eco-friendly!</p><p class="margin-b-2 boom-opacity">If you are looking for custom-printed packaging boxes or plain corrugated boxes, this is the precise place. We manufacture content-protecting, brand-enhancing, sustainable packaging boxes that will help your products to stand-out and get noticed thus increasing your sale. Our boxes offer sustainability and reliability helping you sell more and worry less.</p>
+				<p class="boom-opacity">Our college was founded in the year 2010 on Earth, in Mumbai, India. After the unfortunate apocalypse which made Earth inhabitable, we shifted to the <i>Androemeda Galaxy</i>. </p><p class="margin-b-2 boom-opacity">Keeping in mind that education is the primary need for a good society and human development, we took effort to regroup and continue providing education. Even the huge apocalypse could not stop us from achieving our goals and vision.</p>
 				<div class="margin-r-sm-5 text-right margin-t-0"><a href="about" class="padding-y-1 btn btn-dark home-profile-info">More About Us!</a></div>
 			</div>
 		</div>
@@ -719,7 +574,7 @@
 
 <div class="proudy">
 	<div class="proudy">
-		<h2 class="text-center padding-b-4 padding-t-4 padding-b-md-3 home-about-title boom-opacity font-weight-bold">Our Proud Clients</h2>
+		<h2 class="text-center padding-b-4 padding-t-4 padding-b-md-3 home-about-title boom-opacity font-weight-bold">Our Placement Partners</h2>
 
 		<div class="padding-b-4 padding-t-2">
 
@@ -753,7 +608,7 @@
 	
 
 
-	<div class="container text-right"><p class="text-center home-happy boom-opacity padding-b-4 margin-b-0"><i><b>We are happy to serve many more food, consumer goods and edible oil industries across Ratnagiri, Raigad, Panvel and Navi Mumbai.</b></i></p></div>
+	<div class="container text-right"><p class="text-center home-happy boom-opacity padding-b-4 margin-b-0"><i>We are always improving our college by periodically taking student/parent surveys and acting promptly upon the complaints and suggestions.</i></p></div>
 </div>
 
 
@@ -1007,7 +862,6 @@
 
 		boom();
 
-		contact_vis();
 
 	}
 
@@ -1037,7 +891,6 @@
 			dyheight();
 		}, 1100);
 
-		contact_vis();
 		boom();
 	}
 
