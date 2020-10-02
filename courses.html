@@ -42,11 +42,6 @@
 	<link rel="icon" href="images/favicon.png" type="image/png">
 	<link rel="apple-touch-icon" href="images/favicon.png" type="image/png">
 
-	<!-- CSS only -->
-
-	<!-- JS, Popper.js, and jQuery -->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 
@@ -64,11 +59,6 @@
 				service_data[i].style.height = 'auto';
 			}
 
-			var service = document.getElementsByClassName('service-try');
-			for(var i=0;i<service.length;i++)
-			{
-				service[i].style.width = document.getElementById('service6').clientWidth+'px';
-			}
 
 			if(window.innerWidth>767)
 			{
@@ -133,7 +123,7 @@
 				document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
 				document.getElementById('logo-dark').style.opacity = '1';
 				document.getElementById('logo-light').style.opacity = '0';
-				document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+				document.getElementById('nav').style.boxShadow = '0px 4px 4px rgba(0,0,0,0.25)';
 				let items = document.getElementsByClassName('navbar-item');
 				let i=0;
 				for(i=0;i<items.length;i++)
@@ -143,16 +133,27 @@
 				document.getElementById('bars').style.color = "#000";
 				document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 				document.getElementById('nav').style.height = '60px';
-				$("nav ul li").css("line-height","60px");
-				$("nav a img").css("height","50px");
-				$("nav a img").css("top","5px");
+
+				var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+				for(i=0; i<list.length; i++)
+				{
+					list[i].style.lineHeight = '60px';
+				}
+
+				list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+				list.style.height = '50px';
+				list.style.top = '5px';
+
+				list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+				list.style.height = '50px';
+				list.style.top = '5px';
 			}
 			else
 			{
 				document.getElementById('nav').style.background = 'transparent';
 				document.getElementById('logo-light').style.opacity = '1';
 				document.getElementById('logo-dark').style.opacity = '0';
-				document.getElementById('nav').style.borderBottom = 'none';
+				document.getElementById('nav').style.boxShadow = '0px 0px 0px rgba(0,0,0,0)';
 				if(window.innerWidth>870)
 				{
 					let items = document.getElementsByClassName('navbar-item');
@@ -163,9 +164,20 @@
 					}
 					document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
 					document.getElementById('nav').style.height = '70px';
-					$("nav ul li").css("line-height","70px");
-					$("nav a img").css("height","55px");
-					$("nav a img").css("top","10px");
+
+					var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+					for(i=0; i<list.length; i++)
+					{
+						list[i].style.lineHeight = '70px';
+					}
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+					list.style.height = '55px';
+					list.style.top = '10px';
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+					list.style.height = '55px';
+					list.style.top = '10px';
 				}
 				else
 				{
@@ -177,9 +189,20 @@
 					}
 					document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 					document.getElementById('nav').style.height = '60px';
-					$("nav ul li").css("line-height","60px");
-					$("nav a img").css("height","50px");
-					$("nav a img").css("top","5px");
+
+					var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+					for(i=0; i<list.length; i++)
+					{
+						list[i].style.lineHeight = '60px';
+					}
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+					list.style.height = '50px';
+					list.style.top = '5px';
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+					list.style.height = '50px';
+					list.style.top = '5px';
 				}
 				document.getElementById('bars').style.color = "#fff";
 			}
@@ -254,7 +277,7 @@
 			document.getElementById('thank-pop').style.display = 'none';
 			document.getElementById('uni-contact-btn').style.transition = '0.5s';
 			document.getElementById('uni-contact-btn').style.bottom = '-100px';
-			var fs = $("#pop-subname").css("fontSize");
+			var fs = window.getComputedStyle(document.getElementById('pop-subname'),null).fontSize;
 			document.getElementById('close-pop').style.lineHeight = fs;
 			if(window.innerHeight>849)
 			{
@@ -268,7 +291,7 @@
 			{
 				document.getElementById('contact-pop').style.bottom = '20px';
 			}
-			var pop_ht = $("#contact-pop").css("height");
+			var pop_ht = window.getComputedStyle(document.getElementById('contact-pop'),null).height;
 			document.getElementById('thank-pop').style.height = (parseInt(pop_ht, 10)-9)+'px';
 
 			return false;
@@ -306,19 +329,7 @@
 				email="null";
 			}
 			document.getElementById('pop-submit').innerHTML = 'Submitting';
-			$.ajax({
-				url: 'https://script.google.com/a/preranaenterprises.in/macros/s/AKfycbygPG1GtvkHoF-JVhYVqrz2e5DDC1mqlLXZVWvS/exec',
-				method: 'GET',
-				dataType: 'jsonp',
-				contentType: 'application/json',
-				crossDomain: true,
-				data: {
-					'name': name,
-					'phone': phone,
-					'email': email,
-					'message': message
-				}
-			});
+			formSuccess();
 			return false;
 		}
 
@@ -440,7 +451,6 @@
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service1">
-					<div class="position-absolute service-try d-block" id="try1"></div>
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-globe"></i></div></div>
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Export Quality Cartons</label></div>
@@ -456,7 +466,6 @@
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service2">
-					<div class="position-absolute service-try d-block" id="try2"></div>
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-user-cog"></i></div></div>
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Customized Cartons</label></div>
@@ -472,7 +481,6 @@
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service3">
-					<div class="position-absolute service-try d-block" id="try3"></div>
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-scroll"></i></div></div>
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Finest Corrugated Sheets</label></div>
@@ -488,7 +496,6 @@
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service4">
-					<div class="position-absolute service-try d-block" id="try4"></div>
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-apple-alt"></i></div></div>
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Cartons for Food</label></div>
@@ -504,7 +511,6 @@
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service5">
-					<div class="position-absolute service-try d-block" id="try5"></div>
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-rupee-sign"></i></div></div>
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Affordable Solutions</label></div>
@@ -520,7 +526,6 @@
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
 				<div class="px-auto overflow-hidden service-data" id="service6">
-					<div class="position-absolute service-try d-block" id="try6"></div>
 					<div class="row padding-t-5">
 						<div class="services-circle text-center mx-auto d-block"><div class="col-12 text-center services-icon my-auto"><i class="fas fa-truck-moving"></i></div></div>
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">Timely Delivery</label></div>
@@ -533,89 +538,6 @@
 		</div>
 	</div>
 </div>
-
-<script type="text/javascript">
-	$("#service1").hover(function() {
-			$("#try1").css("height",document.getElementById('service1').clientHeight+'px');
-			$("#try1").css("width",document.getElementById('service1').clientWidth+'px');
-	},function() {
-		$("#try1").css("height","0px");
-	});
-	$("#try1").hover(function() {
-			$("#try1").css("height",document.getElementById('service1').clientHeight+'px');
-			$("#try1").css("width",document.getElementById('service1').clientWidth+'px');
-	},function() {
-		$("#try1").css("height","0px");
-	});
-
-	$("#service2").hover(function() {
-			$("#try2").css("height",document.getElementById('service2').clientHeight+'px');
-			$("#try2").css("width",document.getElementById('service2').clientWidth+'px');
-	},function() {
-		$("#try2").css("height","0px");
-	});
-	$("#try2").hover(function() {
-			$("#try2").css("height",document.getElementById('service2').clientHeight+'px');
-			$("#try2").css("width",document.getElementById('service2').clientWidth+'px');
-	},function() {
-		$("#try2").css("height","0px");
-	});
-
-	$("#service3").hover(function() {
-			$("#try3").css("height",document.getElementById('service3').clientHeight+'px');
-			$("#try3").css("width",document.getElementById('service3').clientWidth+'px');
-	},function() {
-		$("#try3").css("height","0px");
-	});
-	$("#try3").hover(function() {
-			$("#try3").css("height",document.getElementById('service3').clientHeight+'px');
-			$("#try3").css("width",document.getElementById('service3').clientWidth+'px');
-	},function() {
-		$("#try3").css("height","0px");
-	});
-
-	$("#service4").hover(function() {
-			$("#try4").css("height",document.getElementById('service4').clientHeight+'px');
-			$("#try4").css("width",document.getElementById('service4').clientWidth+'px');
-	},function() {
-		$("#try4").css("height","0px");
-	});
-	$("#try4").hover(function() {
-			$("#try4").css("height",document.getElementById('service4').clientHeight+'px');
-			$("#try4").css("width",document.getElementById('service4').clientWidth+'px');
-	},function() {
-		$("#try4").css("height","0px");
-	});
-
-	$("#service5").hover(function() {
-			$("#try5").css("height",document.getElementById('service5').clientHeight+'px');
-			$("#try5").css("width",document.getElementById('service5').clientWidth+'px');
-	},function() {
-		$("#try5").css("height","0px");
-	});
-	$("#try5").hover(function() {
-			$("#try5").css("height",document.getElementById('service5').clientHeight+'px');
-			$("#try5").css("width",document.getElementById('service5').clientWidth+'px');
-	},function() {
-		$("#try5").css("height","0px");
-	});
-
-	$("#service6").hover(function() {
-			$("#try6").css("height",document.getElementById('service6').clientHeight+'px');
-			$("#try6").css("width",document.getElementById('service6').clientWidth+'px');
-	},function() {
-		$("#try6").css("height","0px");
-	});
-	$("#try6").hover(function() {
-			$("#try6").css("height",document.getElementById('service6').clientHeight+'px');
-			$("#try6").css("width",document.getElementById('service6').clientWidth+'px');
-	},function() {
-		$("#try6").css("height","0px");
-	});
-
-
-
-</script>
 
 
 
@@ -707,7 +629,7 @@
 		document.getElementById('nav').style.background = 'rgba(255,255,255,0.97)';
 		document.getElementById('logo-dark').style.opacity = '1';
 		document.getElementById('logo-light').style.opacity = '0';
-		document.getElementById('nav').style.borderBottom = '1px solid rgba(0,0,0,0.3)';
+		document.getElementById('nav').style.boxShadow = '0px 4px 4px rgba(0,0,0,0.25)';
 		let items = document.getElementsByClassName('navbar-item');
 		let i=0;
 		for(i=0;i<items.length;i++)
@@ -717,32 +639,71 @@
 		document.getElementById('bars').style.color = "#000";
 		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 		document.getElementById('nav').style.height = '60px';
-		$("nav ul li").css("line-height","60px");
-		$("nav a img").css("height","50px");
-		$("nav a img").css("top","5px");
+
+		var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+		for(i=0; i<list.length; i++)
+		{
+			list[i].style.lineHeight = '60px';
+		}
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
 	}
 	else if(window.innerWidth<870)
 	{
 		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 		document.getElementById('nav').style.height = '60px';
-		$("nav ul li").css("line-height","60px");
-		$("nav a img").css("height","50px");
-		$("nav a img").css("top","5px");
+
+		var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+		for(i=0; i<list.length; i++)
+		{
+			list[i].style.lineHeight = '60px';
+		}
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
 	}
 	else
 	{
 		document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
 		document.getElementById('nav').style.height = '70px';
-		$("nav a img").css("top","10px");
-		$("nav a img").css("height","55px");
+
+		var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+		for(i=0; i<list.length; i++)
+		{
+			list[i].style.lineHeight = '70px';
+		}
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+		list.style.height = '55px';
+		list.style.top = '10px';
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+		list.style.height = '55px';
+		list.style.top = '10px';
 	}
 	
-	$("nav ul li").hover(function() {
+	list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+
+	document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].onmouseover = function() {
 		if(window.innerWidth>870 && window.scrollY<2)
 		{
-			$("nav ul li a").css("color","#fff");
+			for(i=0; i<list.length; i++)
+			{
+				list[i].getElementsByTagName('a')[0].style.color = '#fff';
+			}
 		}
-	});
+	}
 
 
 
