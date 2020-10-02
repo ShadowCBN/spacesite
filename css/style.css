@@ -3159,3 +3159,7 @@ label #bars
 .font-italic {
   font-style: italic !important;
 }
+
+.text-danger {
+  color: #dc3545 !important;
+}
