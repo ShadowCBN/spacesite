@@ -124,9 +124,20 @@
 				document.getElementById('bars').style.color = "#000";
 				document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 				document.getElementById('nav').style.height = '60px';
-				$("nav ul li").css("line-height","60px");
-				$("nav a img").css("height","50px");
-				$("nav a img").css("top","5px");
+
+				var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+				for(i=0; i<list.length; i++)
+				{
+					list[i].style.lineHeight = '60px';
+				}
+
+				list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+				list.style.height = '50px';
+				list.style.top = '5px';
+
+				list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+				list.style.height = '50px';
+				list.style.top = '5px';
 			}
 			else
 			{
@@ -144,9 +155,20 @@
 					}
 					document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
 					document.getElementById('nav').style.height = '70px';
-					$("nav ul li").css("line-height","70px");
-					$("nav a img").css("height","55px");
-					$("nav a img").css("top","10px");
+
+					var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+					for(i=0; i<list.length; i++)
+					{
+						list[i].style.lineHeight = '70px';
+					}
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+					list.style.height = '55px';
+					list.style.top = '10px';
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+					list.style.height = '55px';
+					list.style.top = '10px';
 				}
 				else
 				{
@@ -158,9 +180,20 @@
 					}
 					document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 					document.getElementById('nav').style.height = '60px';
-					$("nav ul li").css("line-height","60px");
-					$("nav a img").css("height","50px");
-					$("nav a img").css("top","5px");
+
+					var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+					for(i=0; i<list.length; i++)
+					{
+						list[i].style.lineHeight = '60px';
+					}
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+					list.style.height = '50px';
+					list.style.top = '5px';
+
+					list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+					list.style.height = '50px';
+					list.style.top = '5px';
 				}
 				document.getElementById('bars').style.color = "#fff";
 			}
@@ -214,7 +247,7 @@
 			document.getElementById('thank-pop').style.display = 'none';
 			document.getElementById('uni-contact-btn').style.transition = '0.5s';
 			document.getElementById('uni-contact-btn').style.bottom = '-100px';
-			var fs = $("#pop-subname").css("fontSize");
+			var fs = window.getComputedStyle(document.getElementById('pop-subname'),null).fontSize;
 			document.getElementById('close-pop').style.lineHeight = fs;
 			if(window.innerHeight>849)
 			{
@@ -228,7 +261,7 @@
 			{
 				document.getElementById('contact-pop').style.bottom = '20px';
 			}
-			var pop_ht = $("#contact-pop").css("height");
+			var pop_ht = window.getComputedStyle(document.getElementById('contact-pop'),null).height;
 			document.getElementById('thank-pop').style.height = (parseInt(pop_ht, 10)-9)+'px';
 
 			return false;
@@ -290,19 +323,7 @@
 				email="null";
 			}
 			document.getElementById('pop-submit').innerHTML = 'Submitting';
-			$.ajax({
-				url: 'https://script.google.com/a/preranaenterprises.in/macros/s/AKfycbygPG1GtvkHoF-JVhYVqrz2e5DDC1mqlLXZVWvS/exec',
-				method: 'GET',
-				dataType: 'jsonp',
-				contentType: 'application/json',
-				crossDomain: true,
-				data: {
-					'name': name,
-					'phone': phone,
-					'email': email,
-					'message': message
-				}
-			});
+			formSuccess();
 			return false;
 		}
 
@@ -565,32 +586,71 @@
 		document.getElementById('bars').style.color = "#000";
 		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 		document.getElementById('nav').style.height = '60px';
-		$("nav ul li").css("line-height","60px");
-		$("nav a img").css("height","50px");
-		$("nav a img").css("top","5px");
+
+		var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+		for(i=0; i<list.length; i++)
+		{
+			list[i].style.lineHeight = '60px';
+		}
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
 	}
 	else if(window.innerWidth<870)
 	{
 		document.getElementsByClassName('banner')[0].style.paddingTop = '60px';
 		document.getElementById('nav').style.height = '60px';
-		$("nav ul li").css("line-height","60px");
-		$("nav a img").css("height","50px");
-		$("nav a img").css("top","5px");
+
+		var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+		for(i=0; i<list.length; i++)
+		{
+			list[i].style.lineHeight = '60px';
+		}
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+		list.style.height = '50px';
+		list.style.top = '5px';
 	}
 	else
 	{
 		document.getElementsByClassName('banner')[0].style.paddingTop = '70px';
 		document.getElementById('nav').style.height = '70px';
-		$("nav a img").css("top","10px");
-		$("nav a img").css("height","55px");
+
+		var list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+		for(i=0; i<list.length; i++)
+		{
+			list[i].style.lineHeight = '70px';
+		}
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[0].getElementsByTagName('img')[0];
+		list.style.height = '55px';
+		list.style.top = '10px';
+
+		list = document.getElementsByTagName('nav')[0].getElementsByTagName('a')[1].getElementsByTagName('img')[0];
+		list.style.height = '55px';
+		list.style.top = '10px';
 	}
-	
-	$("nav ul li").hover(function() {
+
+	list = document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].getElementsByTagName('li');
+
+	document.getElementsByTagName('nav')[0].getElementsByTagName('ul')[0].onmouseover = function() {
 		if(window.innerWidth>870 && window.scrollY<2)
 		{
-			$("nav ul li a").css("color","#fff");
+			for(i=0; i<list.length; i++)
+			{
+				list[i].getElementsByTagName('a')[0].style.color = '#fff';
+			}
 		}
-	});
+	}
 
 
 
