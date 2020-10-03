@@ -3361,6 +3361,7 @@ label #bars
 {
 	width: 80%;
 	min-width: 180px;
+	border-color: #333;
 }
 
 
