@@ -263,7 +263,7 @@
 				let attr_list = s_opt[i].getAttribute('a').split(',');
 				for(var j=0; j<attr_list.length; j++)
 				{
-					if(attr_list[j].slice(0, s_len).toLowerCase() == search)
+					if(attr_list[j].slice(0, s_len).toLowerCase() == search.toLowerCase())
 					{
 						s_opt[i].style.display = 'block';
 						s_count++;
