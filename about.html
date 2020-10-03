@@ -194,24 +194,6 @@
 			}
 		}
 
-		function contact_vis()
-		{
-			var btn = document.getElementById('uni-contact-btn');
-			var icon = document.getElementById('uni-contact-icon');
-				if(window.scrollY>50 && (window.scrollY + window.innerHeight - 200)<document.getElementById('full-footer').offsetTop)
-				{
-					btn.style.display = 'block';
-					icon.style.opacity = '1';
-				}
-				else
-				{
-					icon.style.opacity = '0';
-					setTimeout(function() {
-						btn.style.display = 'none';
-					}, 450);
-				}
-		}
-
 		function boom()
 		{
 			var opacity = document.getElementsByClassName('boom-opacity');
@@ -231,51 +213,6 @@
 					opacity[i].style.marginTop = '0';
 				}
 			}
-		}
-
-		function slidein()
-		{
-			document.getElementById('name').value = "";
-			document.getElementById('phone').value = "";
-			document.getElementById('email').value = "";
-			document.getElementById('message').value = "";
-			document.getElementById('thank-pop').style.display = 'none';
-			document.getElementById('uni-contact-btn').style.transition = '0.5s';
-			document.getElementById('uni-contact-btn').style.bottom = '-100px';
-			var fs = window.getComputedStyle(document.getElementById('pop-subname'),null).fontSize;
-			document.getElementById('close-pop').style.lineHeight = fs;
-			if(window.innerHeight>849)
-			{
-				document.getElementById('contact-pop').style.bottom = '120px';
-			}
-			else if(window.innerHeight>749)
-			{
-				document.getElementById('contact-pop').style.bottom = '80px';
-			}
-			else
-			{
-				document.getElementById('contact-pop').style.bottom = '20px';
-			}
-			var pop_ht = window.getComputedStyle(document.getElementById('contact-pop'),null).height;
-			document.getElementById('thank-pop').style.height = (parseInt(pop_ht, 10)-9)+'px';
-
-			return false;
-		}
-
-		function slideout()
-		{
-			document.getElementById('contact-pop').style.bottom = '-1000px';
-			if(window.innerWidth<=400)
-			{
-				document.getElementById('uni-contact-btn').style.bottom = '25px';
-			}
-			else
-			{
-				document.getElementById('uni-contact-btn').style.bottom = '30px';
-			}
-			setTimeout(function() {
-				document.getElementById('uni-contact-btn').style.transition = '0s';
-			}, 550);
 		}
 
 		function scroller()
@@ -300,56 +237,6 @@
 					clearInterval(interval);
 				}
 			}, gap);
-		}
-
-		function formSubmit()
-		{
-			document.getElementById('name').setAttribute('readonly', '');
-			document.getElementById('phone').setAttribute('readonly', '');
-			document.getElementById('email').setAttribute('readonly', '');
-			document.getElementById('message').setAttribute('readonly', '');
-			document.getElementById('pop-submit').setAttribute('disabled', '');
-			var name = document.getElementById('name').value;
-			var phone = document.getElementById('phone').value;
-			var email = document.getElementById('email').value;
-			var message = document.getElementById('message').value;
-			if(email=="")
-			{
-				email="null";
-			}
-			document.getElementById('pop-submit').innerHTML = 'Submitting';
-			formSuccess();
-			return false;
-		}
-
-		function contact_submit()
-		{
-			document.getElementById('thank-pop').style.display = 'initial';
-			setTimeout(function() {slideout();},5000);
-		}
-
-		function formSuccess()
-		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-grin-alt"></i></h2>';
-			contact_submit();
-			document.getElementById('name').removeAttribute('readonly');
-			document.getElementById('phone').removeAttribute('readonly');
-			document.getElementById('email').removeAttribute('readonly');
-			document.getElementById('message').removeAttribute('readonly');
-			document.getElementById('pop-submit').removeAttribute('disabled');
-			document.getElementById('pop-submit').innerHTML = 'Submit';
-		}
-
-		function formError()
-		{
-			document.getElementById('thank-pop').innerHTML = '<h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop text-danger" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Sorry</h2><h2 class="text-center padding-t-md-1 padding-t-0">Request could not be submitted</h2><h3 class="text-center padding-t-md-3 padding-t-0"><a href="javascript: void(0)" onclick="return slidein();">Try again</a></h3><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile text-danger"><i class="far fa-frown"></i></h2>';
-			document.getElementById('thank-pop').style.display = 'initial';
-			document.getElementById('name').removeAttribute('readonly');
-			document.getElementById('phone').removeAttribute('readonly');
-			document.getElementById('email').removeAttribute('readonly');
-			document.getElementById('message').removeAttribute('readonly');
-			document.getElementById('pop-submit').removeAttribute('disabled');
-			document.getElementById('pop-submit').innerHTML = 'Submit';
 		}
 	</script>
 
@@ -384,41 +271,7 @@
 
 
 
-<div class="position-fixed uni-contact-btn text-center" id="uni-contact-btn" onclick="slidein();"><span class="uni-contact-text position-relative">Contact Us </span> <i class="far fa-comment-dots uni-contact-icon" id="uni-contact-icon"></i></div>
 
-<div class="position-fixed contact-pop" id="contact-pop">
-	
-	<div class="position-fixed bg-white" id="thank-pop"><h2 class=" subname padding-t-md-3 padding-r-md-3 padding-t-1 padding-r-1 proud-client text-right close-pop color-orange" onclick="slideout();"><i class="fas fa-times"></i></h2><h2 class="text-center padding-t-md-3 padding-t-0">Thank You</h2><h2 class="text-center padding-t-md-1 padding-t-0">for contacting us!</h2><h2 class="text-center padding-t-md-3 padding-t-0">We will get back to you on your given contact details!</h2><h2 class="text-center padding-t-lg-4 padding-t-md-2 padding-t-1 margin-t-lg-2 margin-t-0 thank-pop-smile color-orange"><i class="far fa-grin-alt"></i></h2></div>
-
-	<div class="row">
-		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-10" id="pop-subname">Contact Us</h2>
-		<h2 class=" subname padding-t-2 padding-b-2 proud-client col-2 text-center close-pop color-orange" onclick="slideout();" id="close-pop"><i class="fas fa-times"></i></h2>
-	</div>
-	
-	<form class="ev_form margin-t-0 margin-b-3" autocomplete="off" id="pop-form" action="javascript: void(0)" onsubmit="return formSubmit();">
-        <div class="form-group margin-b-1">
-            <div class="form-required-show">
-                <span class="form-required">* is for required.</span>
-            </div>
-            <label for="name">Name<span class="form-required"> *</span></label>
-            <input type="text" id="name" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Name" autocomplete="off" required></br>
-            <label for="phone">Mobile Number<span class="form-required"> *</span></label>
-            <input type="tel" pattern="[+987][0-9]{9,12}" id="phone" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Mobile number" autocomplete="off" required>
-        	</br>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" class="margin-b-2 margin-t-lg-1 form-control pop-contact-input" placeholder="Enter Your Email" autocomplete="off">
-            </br>
-            <label for="message">Message</label><br>
-            <textarea id="message" class="margin-b-1 margin-t-lg-1 form-control pop-contact-input pop-txt-area" placeholder="Type your message here" autocomplete="off"></textarea>
-            <br>
-
-
-            <button class="btn padding-y-1" id="pop-submit" type="submit" name="sub_form">Submit</button>
-
-
-        </div>
-    </form>
-</div>
 
 
 
@@ -672,7 +525,6 @@
 
 		boom();
 
-		contact_vis();
 
 		if((document.getElementById('scroll-trigger').offsetTop-window.innerHeight)<window.scrollY && animation)
 		{
@@ -712,7 +564,6 @@
 			dyheight();
 		}, 350);
 
-		contact_vis();
 		boom();
 	}
 
