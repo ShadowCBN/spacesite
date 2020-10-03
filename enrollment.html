@@ -53,8 +53,14 @@
 		var course_id = location.href.split('?')[1];
 		course_id = parseInt(course_id, 10);
 
-		const course_list = ['Computer Engineering'];
-		const course_fee = [112000];
+		const course_list = ['B.E. Computer Engineering', 'B.E. Electrical Engineering', 'Bachelor of Astronomy', 'M.B.B.S.', 'B.B.A.', 'M.B.A.'];
+		const course_fee = [112000, 118000, 150000, 450000, 225000, 978000];
+		const course_dur = [4,4,3,5,3,2];
+
+		if(course_id>=course_dur.length || location.href.split('?').length!=2)
+		{
+			location.replace(location.href.split('?')[0].replace('enrollment.html','courses.html'))
+		}
 
 		var no_of_click = 0;
 
@@ -304,6 +310,7 @@
 			document.getElementById('input-galaxy').innerHTML = document.getElementById('galaxy').value;
 			document.getElementById('input-contact').innerHTML = document.getElementById('contact').value;
 			document.getElementById('input-spaceship').innerHTML = document.getElementById('spaceship').value;
+			document.getElementById('input-email').innerHTML = document.getElementById('email').value;
 
 			document.getElementById('checkout-info').style.display = 'none';
 			document.getElementById('receipt-info').style.display = 'block';
@@ -315,6 +322,10 @@
 			document.getElementById('today').innerHTML = date_str;
 
 			document.getElementById('receipt-info').scrollIntoView();
+
+			document.getElementById('ty').innerHTML = 'Thank You';
+
+			page_height();
 
 			return false;
 		}
@@ -341,7 +352,7 @@
 		</nav>
 
 		<div class="container">
-			<h1 class="subname padding-t-2 padding-b-2 text-white">Enroll Now</h1>
+			<h1 class="subname padding-t-2 padding-b-2 text-white" id="ty">Enroll Now</h1>
 		</div>
 
 	</div>
@@ -358,25 +369,29 @@
 			<b>Course Name : </b> <span id="course-name"></span>
 			<br>
 			<b>Course Fee : </b> ₹ <span id="course-fee"></span>
+			<br>
+			<b>Course Duration : </b> <span id="course-dur"></span> years
 		</div>
 		<div class="col-12 col-md-6">
 			<form action="javascript: void(0)" class="form-group" id="checkout-form" onsubmit="return receipt();" autocomplete="off">
 				<label for="name">Your Full Name</label>
-				<input type="text" name="name" id="name" class="form-control" required>
+				<input type="text" name="name" id="name" class="form-control margin-t-1 margin-b-2" required>
 				<div class="row">
 					<div class="col-sm-6 col-12">
 						<label for="age">Age</label>
-						<input type="number" min="18" max="22" name="age" id="age" class="form-control" required>
+						<input type="number" min="18" max="22" name="age" id="age" class="form-control margin-t-1 margin-b-2" required>
 					</div>
 					<div class="col-sm-6 col-12">
 						<label for="contact">Contact Number</label>
-						<input type="text" pattern="[0-9+]{8,13}" name="contact" id="contact" class="form-control" required>
+						<input type="text" pattern="[0-9+]{8,13}" name="contact" id="contact" class="form-control margin-t-1 margin-b-2" required>
 					</div>
 				</div>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" class="form-control margin-t-1 margin-b-2" required>
 				<label for="galaxy">Galaxy of residence</label>
-				<input type="text" name="galaxy" id="galaxy" class="form-control" required>
+				<input type="text" name="galaxy" id="galaxy" class="form-control margin-t-1 margin-b-2" required>
 				<label for="spaceship">Spaceship ID</label>
-				<input type="text" name="spaceship" id="spaceship" class="form-control" required>
+				<input type="text" name="spaceship" id="spaceship" class="form-control margin-t-1 margin-b-2" required>
 				<input type="checkbox" name="library" id="library" onchange="checkout();" checked>
 				<label for="library">Subscribe to college library</label>
 				<br>
@@ -450,14 +465,14 @@
 <div class="container padding-y-5 d-none" id="receipt-info">
 	<div class="row padding-y-3 course-form-container" style="border-bottom: 0;">
 		<div class="col-12 text-center"><b>Receipt</b></div>
-		<div class="col-12 text-center"><b class="course-form-main">SpaceX College</b></div>
+		<div class="col-12 text-center"><b class="course-form-main">Space Institute of East Androemeda</b></div>
 	</div>
 	<div class="row padding-y-3 course-form-container" style="border-top: 0;">
 		<div class="col-12 text-right"><b>Date : </b><span id="today"></span></div>
 		<div class="col-12 col-md-6">
 			<div class="row">
-				<div class="col-12 col-md-6"><b>Name :</b><br><span id="input-name"></span></div>
-				<div class="col-12 col-md-6"><b>Age : </b><span id="input-contact"></span><br><b>Contact : </b><span id="input-age"></span></div>
+				<div class="col-12 col-md-6"><b>Name :</b><span id="input-name"></span><br><b>Email : </b><span id="input-email"></span></div>
+				<div class="col-12 col-md-6"><b>Age : </b><span id="input-age"></span><br><b>Contact : </b><span id="input-contact"></span></div>
 
 				<div class="col-12 col-lg-6">
 					<b>Galaxy of Residence :</b>
@@ -483,11 +498,19 @@
 				</div>
 
 				<div class="col-12">
-					<b>Course Fee :</b>
+					<b>Course Fee :</b> ₹
 					<span id="input-course-fee">
 						
 					</span>
 				</div>
+
+				<div class="col-12">
+					<b>Course Duration :</b>
+					<span id="input-course-dur">
+						
+					</span> years
+				</div>
+
 				<div class="col-12" id="extra-service">
 					<br>
 					<b>Extra Services taken :</b>
@@ -566,6 +589,8 @@
 	document.getElementById('input-course-fee').innerHTML = course_fee[course_id];
 	document.getElementById('course-fee-checkout').innerHTML = course_fee[course_id];
 	document.getElementById('course-fee-receipt').innerHTML = course_fee[course_id];
+	document.getElementById('course-dur').innerHTML = course_dur[course_id];
+	document.getElementById('input-course-dur').innerHTML = course_dur[course_id];
 	checkout();
 
 </script>

@@ -249,6 +249,46 @@
 				}
 			}
 		}
+
+		function search()
+		{
+			var search = document.getElementById('search-box').value;
+			var s_len = search.length;
+			var s_count = 0;
+
+			var s_opt = document.getElementsByClassName('search-opt');
+
+			for(var i=0; i<s_opt.length; i++)
+			{
+				let attr_list = s_opt[i].getAttribute('a').split(',');
+				for(var j=0; j<attr_list.length; j++)
+				{
+					if(attr_list[j].slice(0, s_len).toLowerCase() == search)
+					{
+						s_opt[i].style.display = 'block';
+						s_count++;
+						break;
+					}
+					else
+					{
+						s_opt[i].style.display = 'none';
+					}
+				}
+			}
+
+			if(s_count==0)
+			{
+				document.getElementById('no-course').style.display = 'block';
+			}
+			else
+			{
+				document.getElementById('no-course').style.display = 'none';
+			}
+
+			boom();
+
+			page_height();
+		}
 	</script>
 
 </head>
@@ -295,11 +335,14 @@
 	</div>
 </div>
 
-
+<div class="container padding-t-5">
+	<input type="text" class="form-control search-courses mx-auto" placeholder="Search Courses !" id="search-box" onkeyup="search();" onchange="search();" list="searches">
+</div>
 
 <div class="container padding-y-5">
 	<div class="row">
-		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
+		<div class="col-12 text-center d-none" id="no-course"><h4>Sorry! No such courses available.</h4></div>
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity search-opt" a="engineering,computers,computer engineering,computer science,science">
 			
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
@@ -309,12 +352,12 @@
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">B. Computer Engg.</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">Computer engineering integrates several fields of computer science and electronics engineering required to develop computer hardware and software.<br><b>Duration: 4yrs</b><br><button class="margin-t-3 btn enroll-button">Enroll</button></div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">Computer engineering integrates several fields of computer science and electronics engineering required to develop computer hardware and software.<br><b>Duration: 4yrs</b><br><button class="margin-t-3 btn enroll-button" onclick="location.href = location.href.replace('courses.html','enrollment.html?0')">Enroll</button></div>
 				</div>
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity search-opt" a="engineering,electrical,electrical engineering,electronics,science">
 			
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
@@ -324,12 +367,12 @@
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">B. Electrical Engg.</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">You will learn about various wiring designs, electrical appliances, systems, etc. Get hands-on experience on various electrical equipment.<br><b>Duration: 4yrs</b><br><button class="margin-t-3 btn enroll-button">Enroll</button></div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">You will learn about various wiring designs, electrical appliances, systems, etc. Get hands-on experience on various electrical equipment.<br><b>Duration: 4yrs</b><br><button class="margin-t-3 btn enroll-button" onclick="location.href = location.href.replace('courses.html','enrollment.html?1')">Enroll</button></div>
 				</div>
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity search-opt" a="engineering,astronomy,science">
 			
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
@@ -339,12 +382,12 @@
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">B. in Astronomy</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">Get a chance to learn about various aspects of space and celestial bodies. Witness some of the rare astronomical events from our Space-X 240 Telescope.<br><b>Duration: 3yrs</b><br><button class="margin-t-3 btn enroll-button">Enroll</button></div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">Get a chance to learn about various aspects of space and celestial bodies. Witness some of the rare astronomical events from our Space-X 240 Telescope.<br><b>Duration: 3yrs</b><br><button class="margin-t-3 btn enroll-button" onclick="location.href = location.href.replace('courses.html','enrollment.html?2')">Enroll</button></div>
 				</div>
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity search-opt" a="medical,doctor,mbbs,m.b.b.s.">
 			
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
@@ -354,12 +397,12 @@
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">M.B.B.S.</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">Learn about medicines, biology, bio-chemistry and other medical aspects. This course will make you a certified doctor after successful completion.<br><b>Duration: 5yrs</b><br><button class="margin-t-3 btn enroll-button">Enroll</button></div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">Learn about medicines, biology, bio-chemistry and other medical aspects. This course will make you a certified doctor after successful completion.<br><b>Duration: 5yrs</b><br><button class="margin-t-3 btn enroll-button" onclick="location.href = location.href.replace('courses.html','enrollment.html?3')">Enroll</button></div>
 				</div>
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity search-opt" a="bba,business,administration,business administration,bachelors in business administration,bachelor in business administration">
 			
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
@@ -369,12 +412,12 @@
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">B.B.A.</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">The Bachelor of Business Administration degree will be conferred to you after a full-time study in one or more areas of business concentrations.<br><b>Duration: 3yrs</b><br><button class="margin-t-3 btn enroll-button">Enroll</button></div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">The Bachelor of Business Administration degree will be conferred to you after a full-time study in one or more areas of business concentrations.<br><b>Duration: 3yrs</b><br><button class="margin-t-3 btn enroll-button" onclick="location.href = location.href.replace('courses.html','enrollment.html?4')">Enroll</button></div>
 				</div>
 			</div>
 			
 		</div>
-		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity">
+		<div class="col-lg-4 col-md-6 col-12 boom-mt boom-opacity search-opt" a="mba,business,administration,business administration,masters in business administration,master in business administration">
 			
 			<div class="mx-auto services-cards margin-b-4 margin-b-sm-5">
 				
@@ -384,7 +427,7 @@
 						<div class="col-12 padding-x-3 text-center services-title margin-y-0"><label for="expand1">M.B.A.</label></div>
 					</div>
 
-					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">A Master of Business Administration, or MBA, is a general graduate business degree that teaches students technical, managerial, and leadership skills.<br><b>Duration: 2yrs</b><br><button class="margin-t-3 btn enroll-button">Enroll</button></div>
+					<div class="container text-center services-para padding-t-lg-4 padding-y-2 service-no padding-b-sm-3">A Master of Business Administration, or MBA, is a general graduate business degree that teaches students technical, managerial, and leadership skills.<br><b>Duration: 2yrs</b><br><button class="margin-t-3 btn enroll-button" onclick="location.href = location.href.replace('courses.html','enrollment.html?5')">Enroll</button></div>
 				</div>
 			</div>
 			
